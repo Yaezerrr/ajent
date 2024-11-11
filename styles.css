@@ -1,0 +1,502 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #241515;
+    overflow-x: hidden;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* Make the paragraph visible when it is scrolled into view */
+.visible {
+    opacity: 1;
+}
+
+/* Additional styles can go here */
+
+header {
+    background: url('images/IMG_3690.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    
+}
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    animation: fadeInDown 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+    display: inline-flex; /* Ensures the content is aligned inline */
+    align-items: center; /* Aligns text and image vertically */
+    margin-left: 60px;
+}
+
+header .letter-a, header .letter-ent {
+    display: inline-block; /* Keeps the text and image in a single line */
+    margin-left: -60px;
+}
+/* Remove extra margins and padding for the J image */
+header .letter-j img.animated-j {
+    width: 150px; /* Adjust size if needed */
+    height: auto;
+    vertical-align: middle;
+    margin-left: -60px; /* Reduced margin */
+    margin-right: 0; /* Removed margin */
+    padding: 0; /* Ensures no padding around image */
+    animation: starshine 3s infinite alternate ease-in-out; /* Starshine animation */
+}
+
+/* Starshine animation keyframes */
+@keyframes starshine {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(170, 42, 42, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgb(30, 180, 8), 0 0 40px rgba(255, 255, 255, 0.8);
+        transform: scale(1.05);
+    }
+}
+
+
+
+header p {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+/* Base Styles for Navbar */
+nav {
+    background: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Adds space between links */
+    justify-content: center; /* Centers the links in desktop view */
+    flex-grow: 1; /* Ensures it takes up space for alignment */
+}
+
+/* Style for Links */
+nav a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: #4d78a5;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        text-align: center; /* Centers links in mobile view */
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        border-top: 1px solid #444;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Show the nav-links when 'active' class is added */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+.hero-section {
+   
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.hero-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    
+}
+
+.hero-section .btn {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    position: relative;
+    color: rgb(239, 237, 237);
+    background-color: transparent;
+    
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 50px 20px;
+    color: white;
+    flex-wrap: wrap; /* Allows the items to wrap in mobile view */
+}
+
+.feature {
+    width: 45%; /* Adjusts width to fit two features side-by-side on larger screens */
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    color: rgb(236, 229, 229);
+    position: relative;
+    margin: 10px; /* Adds space around each feature container */
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Adjustments for each background */
+.feature-1 {
+    background-image: url('images/aje17.jpeg');
+    background-position: -50px center;
+}
+
+.feature-2 {
+    background-image: url('images/aje14.jpeg');
+    background-position: -50px center;
+}
+
+.feature-3 {
+    background-image: url('images/aje16.jpeg');
+    background-position: -50px center;
+}
+
+/* Headings and text styles */
+.feature h3, .feature p {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    margin: 0;
+}
+
+.feature h3 {
+    color: #13d813;
+}
+
+/* Overlay effect */
+.feature::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column; /* Stack features vertically */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .feature {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Space between stacked features */
+        height: 200px; /* Adjust height as needed for mobile */
+    }
+
+    /* Optional: Adjust background positions for better centering on smaller screens */
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        background-position: center center;
+    }
+}
+
+
+.house-listings {
+    padding: 50px 20px;
+    color: white;
+}
+
+.houses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.house {
+    width: 30%;
+    height: 300px; /* Adjust height as needed */
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Specific backgrounds for each house */
+.house-1 {
+    background-image: url('images/aje13.jpeg'); /* Replace with actual image URL */
+}
+
+.house-2 {
+    background-image: url('images/aje11.jpeg'); /* Replace with actual image URL */
+}
+
+.house-3 {
+    background-image: url('images/aje2.jpeg'); /* Replace with actual image URL */
+}
+
+/* Add a hover effect if desired */
+.house:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.house h3 {
+    margin-top: 15px;
+    color: #134ed8; /* Gold color for contrast against the background */
+}
+
+.house p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+   
+    color: rgb(20, 17, 17);
+    padding: 50px 0;
+}
+
+.testimonials h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonials .testimonial {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.testimonials .testimonial img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 20px;
+}
+
+.testimonials .testimonial p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.testimonials .testimonial::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Contact Section */
+.contact-section {
+    background: url('images/IMG_3682.jpg') no-repeat center center/cover;
+    padding: 50px 20px;
+    text-align: center;
+    color: rgb(130, 56, 56);
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background: #007bff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+.contact-section button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .footer-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Random background image switching with fade effect */
+.hero-section, .features, .house-listings, .testimonials, .contact-section {
+    position: relative;
+   
+}
+.hero-section::before, .features::before, .house-listings::before, .testimonials::before, .contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    animation: changeBackground 60s infinite;
+}
+
+/* Scroll animation */
+.hero-section, .features, .house-listings, .testimonials, .contact-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hero-section.visible, .features.visible, .house-listings.visible, .testimonials.visible, .contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Button text box */
+.btn::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}

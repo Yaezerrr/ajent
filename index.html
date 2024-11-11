@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJENT - Find Your Perfect Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span class="letter-a">A</span>
+            <span class="letter-j"><img src="images/aje.png" alt="J" class="animated-j"></span>
+            <span class="letter-ent">ENT</span>
+        </h1>
+        <p class="hidden">Connecting Landlords & Renters in Africa</p>
+    </header>
+   <!-- Navigation Bar -->
+<nav>
+    <div class="nav-container">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="#listings">Listings</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <h2>Find Your Dream Home or Tenant Today</h2>
+    <p class="hidden">AJENT makes it easy for landlords to manage properties and for renters to find their perfect home in Nigeria.</p>
+    <button class="btn" onclick="scrollToSection('features')" data-text="Explore Features">Explore Features</button>
+</section>
+
+<!-- Features Section -->
+ <section id="features" class="features">
+    <div class="feature feature-1">
+        <h3>Easy Property Management</h3>
+        <p class="hidden">Manage your properties effortlessly with our comprehensive tools designed for landlords.</p>
+    </div>
+    <div class="feature feature-2">
+        <h3>Find Your Dream Home</h3>
+        <p class="hidden">Search through our extensive listings to find a home that matches your needs and budget.</p>
+    </div>
+    <div class="feature feature-3">
+        <h3>Secure Transactions</h3>
+        <p class="hidden">Conduct transactions with peace of mind, knowing your data and payments are secure.</p>
+    </div>
+</section>
+
+<section id="listings" class="house-listings">
+    <h2>Featured Listings</h2>
+    <div class="houses">
+        <div class="house house-1">
+            <h3>Luxury 3-Bedroom Apartment</h3>
+            <p class="hidden">Located in the heart of Lagos, this apartment offers modern amenities and breathtaking views.</p>
+        </div>
+        <div class="house house-2">
+            <h3>Cozy 2-Bedroom House</h3>
+            <p class="hidden">A charming home perfect for a small family, with a beautiful garden and spacious living area.</p>
+        </div>
+        <div class="house house-3">
+            <h3>Affordable 1-Bedroom Studio</h3>
+            <p class="hidden">An ideal choice for young professionals, this studio offers convenience and comfort.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+        <img src="images/IMG_3898.jpg" alt="User Testimonial">
+        <p class="hidden">"AJENT made finding a reliable tenant so easy! The platform is user-friendly and the customer support is excellent." - John D.</p>
+    </div>
+    <div class="testimonial">
+        <img src="images/david.jpeg" alt="User Testimonial">
+        <p class="hidden">"I found my dream home on AJENT within days of signing up. The process was smooth and hassle-free." - Mary A.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form action="submit_form.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn" data-text="Send Message">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 AJENT. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+    </div>
+</footer>
+    
+    <!-- JavaScript -->
+    <script src="ajent.js"></script>
+</body>
+
+</html>
